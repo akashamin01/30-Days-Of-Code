@@ -1,0 +1,32 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main".
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please Enter Length of array");
+        int len = sc.nextInt();
+        // System.out.println(len);
+        System.out.println("Please Enter Elements of array");
+        int arr[] = new int[len];
+        for(int a=0; a<=len-1;a++){
+            arr[a] = sc.nextInt();
+        }
+        // for(int a=0; a<=len-1;a++){
+        //     System.out.println(arr[a]);
+        // }
+        int large = arr[0];
+        int small = arr[0];
+        for(int a=0; a<=len-1;a++){
+           if(arr[a]>large){
+               large = arr[a];
+           }
+           if(arr[a]<small){
+               small = arr[a];
+           }
+        }
+        System.out.println("large = " + large + "\nsmall = " + small);
+    }
+}
